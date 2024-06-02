@@ -1,0 +1,1 @@
+ C:\\dev\\yanenko_yana_diploma\\client\\.dart_tool\\flutter_build\\13fb85950f0605cba1697e7e513a5470\\native_assets.yaml: 
