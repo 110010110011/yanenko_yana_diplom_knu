@@ -1,0 +1,14 @@
+com.example.my_app-jetified-window-java-1.0.0-beta04-0 C:\Users\Lenovo\.gradle\caches\transforms-3\2bd4bcf7edde35867619ac3bea578f90\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.my_app-jetified-window-1.0.0-beta04-1 C:\Users\Lenovo\.gradle\caches\transforms-3\518111e08d93c16bc666f5016f25f03d\transformed\jetified-window-1.0.0-beta04\res
+com.example.my_app-core-1.6.0-2 C:\Users\Lenovo\.gradle\caches\transforms-3\9ae990dd2d4353842bc15594b2d8f0d6\transformed\core-1.6.0\res
+com.example.my_app-jetified-annotation-experimental-1.1.0-3 C:\Users\Lenovo\.gradle\caches\transforms-3\cdf1e8c032ad5a7eddaa93f9b56918b8\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.my_app-debug-4 C:\dev\yanenko_yana_diploma\client\android\app\src\debug\res
+com.example.my_app-main-5 C:\dev\yanenko_yana_diploma\client\android\app\src\main\res
+com.example.my_app-pngs-6 C:\dev\yanenko_yana_diploma\client\build\app\generated\res\pngs\debug
+com.example.my_app-resValues-7 C:\dev\yanenko_yana_diploma\client\build\app\generated\res\resValues\debug
+com.example.my_app-rs-8 C:\dev\yanenko_yana_diploma\client\build\app\generated\res\rs\debug
+com.example.my_app-mergeDebugResources-9 C:\dev\yanenko_yana_diploma\client\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.my_app-mergeDebugResources-10 C:\dev\yanenko_yana_diploma\client\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.my_app-merged_res-11 C:\dev\yanenko_yana_diploma\client\build\app\intermediates\merged_res\debug
+com.example.my_app-packaged_res-12 C:\dev\yanenko_yana_diploma\client\build\image_gallery_saver\intermediates\packaged_res\debug
+com.example.my_app-packaged_res-13 C:\dev\yanenko_yana_diploma\client\build\path_provider_android\intermediates\packaged_res\debug
