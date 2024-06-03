@@ -59,6 +59,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
   late int counter;
 
   final _inputParameterFieldController = TextEditingController();
+  final _inputIpAddressFieldController = TextEditingController();
 
   @override
   void initState(){
@@ -75,10 +76,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
   bool startEnabled = true;
   bool resumePauseEnabled = false;
 
+  String ipAddress = "";
+
   void scan(){
+    var address = 'ws://${ipAddress == "" ? '10.0.2.2' : ipAddress}:8080/ws';
     setState(() {
       channel = WebSocketChannel.connect(
-        Uri.parse('ws://10.0.2.2:8080/ws'),
+        Uri.parse(address),
       );
     });
 
@@ -316,7 +320,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
                 onSubmitted: (String input) {
                   microscopeParams.setValue(input, dropdownSelectedValue);
                   setState(() {
-                    startPixels = List.filled(pow(microscopeParams.sizeInPxl, 2).toInt(), Colors.grey[200]);
+                    if (microscopeParams.sizeInPxl != sqrt(startPixels.length)){
+                      startPixels = List.filled(pow(microscopeParams.sizeInPxl, 2).toInt(), Colors.grey[200]);
+                    }
                   });
                 }
             ),
@@ -355,6 +361,40 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
           ),
         ],
       ),
+
+      Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: TextField(
+              controller: _inputIpAddressFieldController,
+              keyboardType: TextInputType.number,
+              onChanged: (text) {
+                ipAddress = text;
+              },
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter ip address',
+              ),
+            ),
+          ),
+          Expanded(
+            child: ElevatedButton(
+              style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 20),
+                  backgroundColor: Colors.white70
+              ),
+              onPressed: (){
+                setState(() {
+                  ipAddress = "";
+                  _inputIpAddressFieldController.clear();
+                });
+              },
+              child: const Text('Clear IP'),
+            ),
+          )
+        ],
+      )
     ]);
 
   }

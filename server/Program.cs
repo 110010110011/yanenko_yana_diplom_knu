@@ -1,11 +1,13 @@
 using System.Net;
+using System.Net.Sockets;
 using System.Net.WebSockets;
 using System.Text;
 using MicroParams;
 using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseUrls("http://192.168.0.111:8080");
+builder.WebHost.UseUrls("http://localhost:8080");
+builder.WebHost.UseUrls($"http://{GetLocalIPAddress()}:8080");
 var app = builder.Build();
 app.UseWebSockets();
 
@@ -123,6 +125,19 @@ void ResetParams()
     counter = 1;
     goRight = true;
     index = index == -1 ? objParams!.SizeInPxl * objParams.SizeInPxl - objParams.SizeInPxl : index;
+}
+
+static string GetLocalIPAddress()
+{
+    var host = Dns.GetHostEntry(Dns.GetHostName());
+    foreach (var ip in host.AddressList)
+    {
+        if (ip.AddressFamily == AddressFamily.InterNetwork)
+        {
+            return ip.ToString();
+        }
+    }
+    throw new Exception("No network adapters with an IPv4 address in the system!");
 }
 
 

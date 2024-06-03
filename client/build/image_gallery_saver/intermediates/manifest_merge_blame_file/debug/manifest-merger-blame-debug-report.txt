@@ -3,6 +3,6 @@
 3    package="com.example.imagegallerysaver" >
 4
 5    <uses-sdk android:minSdkVersion="16" />
-5-->C:\Users\Lenovo\AppData\Local\Pub\Cache\hosted\pub.dev\image_gallery_saver-2.0.3\android\src\main\AndroidManifest.xml
+5-->C:\Users\yevhenii.ibrahimov\AppData\Local\Pub\Cache\hosted\pub.dev\image_gallery_saver-2.0.3\android\src\main\AndroidManifest.xml
 6
 7</manifest>
